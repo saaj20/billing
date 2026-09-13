@@ -234,7 +234,7 @@
           <input type="date" id="billDate" />
         </div>
       </div>
-      <label>Shri/Smt (Customer name)</label>
+      <label>Shri (Customer name)</label>
       <input type="text" id="customer" placeholder="Customer name" />
 
       <div class="items">
@@ -284,7 +284,9 @@
       <label>GSTIN</label>
       <input type="text" id="s-gstin" />
       <div class="row2">
-        <div><label>mob</label><input type="text" id="s-resiphone" /></div>
+        <div><label>STD</label><input type="text" id="s-std" /></div>
+        <div><label>Shop phone</label><input type="text" id="s-shopphone" /></div>
+        <div><label>Resi. phone</label><input type="text" id="s-resiphone" /></div>
       </div>
       <label>Bill title (e.g. Purchases Bill / Sales Bill)</label>
       <input type="text" id="s-title" />
@@ -343,7 +345,9 @@
     shopName:"Hirachand Ramchand Shah",
     address:"Saraf Bazar - Kalaburagi - 585 101 - (Karnataka)",
     gstin:"29APMPS8006B1ZQ",
-    mob:"278362",
+    std:"08472",
+    shopphone:"278364",
+    resiphone:"278362",
     title:"Purchases Bill",
     jurisdiction:"Subject to Gulbarga Jurisdiction",
     forline:"FOR - HIRACHAND RAMCHAND SHAH",
@@ -723,7 +727,7 @@
     doc.setFontSize(7.5);
     doc.setFont('helvetica','normal');
     doc.text('GSTIN No. '+settings.gstin, 10, y);
-    doc.text( mob-'+settings.mob, W-10, y, {align:'right'});
+    doc.text('STD-'+settings.std+'  Shop-'+settings.shopphone, W-10, y, {align:'right'});
     y += 6;
     doc.setFont('times','bolditalic');
     doc.setFontSize(16);
